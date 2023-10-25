@@ -43,3 +43,14 @@ netflix_df_movies_only = netflix_df[netflix_df['type']=='Movie']
 netflix_movies_col_subset = netflix_df_movies_only[['title', 'country', 'genre', 'release_year', 'duration']]
 # Print the first five rows of the new DataFrame
 print(netflix_movies_col_subset[:5])
+
+
+
+# Create a figure and increase the figure size
+fig = plt.figure(figsize=(12,8))
+# Create a scatter plot of duration versus year
+plt.scatter(netflix_movies_col_subset['release_year'], netflix_movies_col_subset['duration'])
+# Create a title
+plt.title('Movie Duration by Year of Release')
+# Show the plot
+plt.show()
