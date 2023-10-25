@@ -61,3 +61,23 @@ plt.show()
 short_movies = netflix_movies_col_subset[netflix_movies_col_subset['duration'] < 60]
 # Print the first 20 rows of short_movies
 print(short_movies[:20])
+
+
+
+# Define an empty list
+colors = []
+# Iterate over rows of netflix_movies_col_subset
+for index, rows in netflix_movies_col_subset.iterrows() :
+    if rows['genre'] == 'Children' :
+        colors.append('red')
+    elif rows['genre'] == 'Documentaries' :
+        colors.append('blue')
+    elif rows['genre'] == 'Stand-Up' :
+        colors.append('green')
+    else:
+        colors.append('black')
+# Inspect the first 10 values in your list
+print(colors[:10])
+
+
+
